@@ -1,9 +1,9 @@
 function update(){
 	const str = document.getElementById("input_str").value;
 	const target = document.getElementById("output");
-	const out_json = window.calc_bs_func(str)
+	const out_json = window.calc_bs_func(str);
 
-	target.innerHTML = out_json
+	target.innerHTML = out_json;
 
 
 	try {
@@ -74,7 +74,7 @@ function draw(str, obj, idx){
 	});
 }
 
-const js = import("./node_modules/@shibh308/minimum_scheme/minimum_scheme.js");
+const js = import("./node_modules/minimum_scheme/minimum_scheme.js");
 js.then(js => {
 	window.update = update;
 	window.calc_bs_func = js.min_bs;
